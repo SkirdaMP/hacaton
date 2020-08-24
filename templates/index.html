@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Post number to model</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Set" />
+</form>
+{% if result != 0 %}
+   <h1>{{ result }}</h1>
+{% endif %}
+{% endblock %}
